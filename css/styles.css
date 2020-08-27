@@ -87,6 +87,9 @@ img {
 .contacts-list .contacts:hover, .contacts-list .contacts:focus{
     color:var(--lightblue-color);
 }
+.section.hero{
+    padding-bottom: 0;
+}
 .hero{
     background-color: var(--back-color);
 }
@@ -94,11 +97,12 @@ img {
     vertical-align: middle;
     text-align: center;
     padding-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom:200px;
     margin-left: auto;
     margin-right: auto;
 }
 .hero .title{
+    margin-bottom: 30px;
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
@@ -190,11 +194,14 @@ img {
     flex-wrap: wrap;
 }
 .team-list .title{
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     color: var(--main-text-color);
 }
 .team-list .text{
+    margin-bottom: 30px;
     font-size: 16px;
     color: var(--second-text-color);
 }
@@ -202,6 +209,8 @@ img {
     width: calc(100%-30px*3)/4;
     margin-right: 30px;
     margin-bottom: 30px;
+    text-align: center;
+    background-color: var(--white-color);
 }
 .team-item:nth-child(4n) {
     margin-right: 0;

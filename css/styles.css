@@ -13,6 +13,31 @@ body {
     color: var(--main-text-color);
     background-color:var(--white-color);
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.flexbox {
+    display: flex;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.page-header{
+    background-color: var(--white-color);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 .logo-title{
     font-family: 'Raleway', sans-serif;
     color: var(--black-color);
@@ -21,15 +46,22 @@ body {
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-right: 93px;
 }
 .logo{
     color:var(--lightblue-color);
 }
 .site-nav{
+    display: flex;
+
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
 }
+.site-item:not(:last-child) {
+    margin-right: 50px;
+  }
 .site-nav .link {
     color: var(--main-text-color);
 }
@@ -40,16 +72,31 @@ body {
 .site-nav .link:focus{
     color:var(--lightblue-color);
 }
-.nav-list .contacts{
+.contacts-list{
+    display: flex;
+}
+.contacts-item:not(:last-child){
+    margin-right: 50px;
+    margin-left: 330px;
+}
+.contacts-list .contacts{
     font-weight: 500;
     font-size: 14px;
     color: var(--second-text-color);
 }
-.nav-list .contacts:hover, .nav-list .contacts:focus{
+.contacts-list .contacts:hover, .contacts-list .contacts:focus{
     color:var(--lightblue-color);
 }
 .hero{
     background-color: var(--back-color);
+}
+.hero-pos{
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .hero .title{
     color: var(--white-color);
@@ -57,7 +104,6 @@ body {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    text-align: center;
     text-transform: uppercase;
 }
 .hero .button{
@@ -75,20 +121,33 @@ body {
 }
 .hero .button:hover, .hero .button:focus{
     border-radius: 0px;
-    padding: 11px 33px;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.hidden-title {
+.hidden {
     display: none;
 }
 .section-list{
     letter-spacing: 0.03em;
+    padding-top: 94px;
 }
+.section-item{
+    width: calc(100%-30px*3)/4;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.section-item:nth-child(4n) {
+    margin-right: 0;
+}
+.section-item:nth-last-child(-n + 4) {
+    margin-bottom: 0;
+  }
 .section-list .title{
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     color: var(--main-text-color);
-
     text-transform: uppercase;
 }
 .section-list .text{
@@ -97,17 +156,38 @@ body {
     color: var(--second-text-color);
 }
 .section-title{
+    padding-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
 }
+.work-list{
+    flex-wrap: wrap;
+}
+.work-item{
+    width: calc(100%-30px*2)/3;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.work-item:nth-child(3n){
+    margin-right: 0;
+}
+.work-item:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+.section{
+    padding-bottom: 94px;
+}
 .section.team{
+    padding-top: 94px;
     background-color: var(--lightgray-color);
 }
 .team-list{
     letter-spacing: 0.03em;
+    flex-wrap: wrap;
 }
 .team-list .title{
     font-weight: 500;
@@ -118,21 +198,54 @@ body {
     font-size: 16px;
     color: var(--second-text-color);
 }
+.team-item{
+    width: calc(100%-30px*3)/4;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.team-item:nth-child(4n) {
+    margin-right: 0;
+}
+.team-item:nth-last-child(-n + 4) {
+    margin-bottom: 0;
+}
 .footer{
     background-color: var(--back-color);
 }
-.address{    
+
+.address .map-address{
+    display: inline-block;
+    margin-bottom: 9px;    
     font-style: normal;
     font-size: 14px;
     color: var(--white-color);
 }
+
 .footer .logo-title{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 0px;
+
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     line-height: 1.19;
     font-size: 26px;
     letter-spacing: 0.03em;
     color: var(--white-color);
+}
+.cont-map .contacts-list{
+    display: block;
+}
+.cont-map .contacts-item{
+    margin-right: 0;
+    margin-left: 0;
+}
+.contacts.mail{
+    margin-bottom: 9px;
+}
+.cont-map{
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .filter .button{
     font-family: inherit;
